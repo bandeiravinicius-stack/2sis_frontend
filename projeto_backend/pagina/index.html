@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livraria XYZ - Loja Virtual</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1>Livraria XYZ</h1>
+        <p class="subtitle">Descubra histórias incríveis no nosso catálogo oficial!</p>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <!-- Painel de Alertas e Notificações (visível na tela, conforme regras de UX) -->
+      <div id="mensagem-status" class="mensagem-box" style="display: none;"></div>
+
+      <section class="catalogo-section">
+        <h2>Catálogo de Livros</h2>
+        <!-- Os cards são gerados dinamicamente via fetch da API (Step 18) -->
+        <div class="card-container" id="cards-container">
+          <p class="loading-text">Carregando livros da API...</p>
+        </div>
+      </section>
+
+      <section class="acoes-section">
+        <p>Revise suas seleções ou finalize seu pedido com facilidade:</p>
+        <div class="btn-container">
+          <button id="view-cart-btn" class="btn btn-secondary">
+            🛒 Ver Carrinho
+          </button>
+          <button id="checkout-btn" class="btn btn-primary">
+            💳 Finalizar Compra
+          </button>
+        </div>
+      </section>
+
+      <!-- Visualização Interativa do Carrinho (Step 19) -->
+      <section id="carrinho-section" class="carrinho-section" style="display: none;">
+        <h2>Seu Carrinho de Compras</h2>
+        <div id="carrinho-view"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Livraria XYZ — Conectado à API Node.js / Express na porta 3000</p>
+    </footer>
+
+    <!-- Script de integração com a API -->
+    <script src="script.js"></script>
+  </body>
+</html>
